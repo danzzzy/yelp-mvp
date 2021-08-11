@@ -2,11 +2,11 @@
 
   <h1><%= @restaurant.name %> Reviews</h1>
 
-      <% @restaurant.reviews.each_with_index do |review, index| %>
+      <% @restaurant.reviews.each do |review| %>
     <div class="notification">
       <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
       <div class="notification-content">
-        <p><small> <%= review.rating %> stars</small></p>
+        <p><small> <%= review.rating %> </small></p>
         <p>Comment: <%= review.content %></p>
       </div>
       </div>

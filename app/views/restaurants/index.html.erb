@@ -2,6 +2,8 @@
   <h1 class="mb-5">Welcome to Yelp</h1>
   <% @restaurants.each do |restaurant| %>
   <%= link_to restaurant.name, restaurant_path(restaurant) %>
-    <p> <%= restaurant.address %> <%= restaurant.category %> <%= restaurant.phone_number %></p>
+    <p> <%= restaurant.address %> <br>
+    Category: <%= restaurant.category.capitalize %> <br>
+    Phone Number: <%= restaurant.phone_number %></p>
   <% end %>
 </div>

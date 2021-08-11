@@ -2,7 +2,7 @@ class RestaurantsController < ApplicationController
   before_action :find_restuarant, only: [:show]
 
   def index
-    @restaurant = Restaurant.all
+    @restaurants = Restaurant.all
   end
 
   def show

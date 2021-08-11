@@ -1,12 +1,15 @@
 <div class="container mt-5">
-  <h1><%= @restaurant.name %></h1>
 
+  <h1><%= @restaurant.name %> Reviews</h1>
 
-  <ul>
-    <% @restaurant.reviews.each do |review| %>
-      <li><%= review.content %></li>
+      <% @restaurant.reviews.each_with_index do |review, index| %>
+    <div class="notification">
+      <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
+      <div class="notification-content">
+        <p><small> <%= review.rating %> stars</small></p>
+        <p>Comment: <%= review.content %></p>
+      </div>
+      </div>
     <% end %>
-  </ul>
-  <%= link_to "Back Home", restaurants_path %>
-  <%= link_to "Write a review", new_restaurant_review_path(@restaurant) %>
+  <%= link_to "Write a review", new_restaurant_review_path(@restaurant), class: "btn btn-secondary" %>
 </div>

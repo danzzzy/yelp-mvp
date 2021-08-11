@@ -1,0 +1,8 @@
+<div class="container mt-5">
+  <h1 class="mb-5">Welcome to Yelp</h1>
+  <% @restaurant.each do |restaurant| %>
+  <%= link_to restaurant.name, restaurant_path(restaurant) %>
+    <p> <%= restaurant.address %> <%= restaurant.category %> <%= restaurant.phone_number %></p>
+  <% end %>
+  <%= link_to "Add a restaurant", new_restaurant_path %>
+</div>

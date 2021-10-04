@@ -5,7 +5,16 @@
 .avatar-large {
   width: 56px;
   border-radius: 50%;
+  object-fit: cover;
+  margin: 8px;
 }
+
+@media (max-width: 768px) {
+  .avatar-large {
+    width: 50px;
+  }
+}
+
 .avatar-bordered {
   width: 40px;
   border-radius: 50%;

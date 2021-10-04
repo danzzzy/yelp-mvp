@@ -1,13 +1,41 @@
-<div class="container mt-5">
-  <h1 class="mb-5">Welcome to Yelp</h1>
-    <div class="row">
-      <% @restaurants.each do |restaurant| %>
-        <div class="col-6 col-md-3">
-          <%= link_to restaurant.name, restaurant_path(restaurant) %>
-            <p> <%= restaurant.address %> <br>
-            Category: <%= restaurant.category.capitalize %> <br>
-            Phone Number: <%= restaurant.phone_number %></p>
-        </div>
-      <% end %>
+<div class="home-page">
+<%# <%= render 'components/navlinks' %> %>
+  <div class="container mt-3">
+    <div class="mb-5">
+      <h1 class="header-text">Welcome to Valuant</h1>
+      <h5 class="subheader-text">Comment & Rate your favorite restaurant</h5>
     </div>
+  </div>
+  <div class="container restaurant-index">
+      <div class="row">
+        <% @restaurants.each do |restaurant| %>
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <%= link_to restaurant_path(restaurant), class: "restaurant-link" do %>
+              <div class="restaurant-card">
+                <div>
+                  <div class="restaurant-card-name">
+                    <%= restaurant.name %>
+                  </div >
+                  <p>
+                  <% case restaurant.category %>
+                  <% when "japanese" %>
+                    <%= restaurant.category.capitalize  %> 🇯🇵
+                  <% when "belgian" %>
+                    <%= restaurant.category.capitalize  %> 🇧🇪
+                  <% when "italian" %>
+                    <%= restaurant.category.capitalize  %> 🇮🇹
+                  <% when "french" %>
+                    <%= restaurant.category.capitalize  %> 🇫🇷
+                  <% when "chinese" %>
+                    <%= restaurant.category.capitalize  %> 🇨🇳
+                  <% end %><br>
+                  Address: <%= restaurant.address %> <br>
+                  Phone: <%= restaurant.phone_number %></p>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+  </div>
 </div>

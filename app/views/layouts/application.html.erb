@@ -8,21 +8,10 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to restaurants_path, class: "navbar-brand" do %>
-  <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-  <% end %>
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <%= link_to "Home", restaurants_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Add Restaurant", new_restaurant_path, class: "nav-link" %>
-      </li>
-    </ul>
-</div>
+    <% unless controller.controller_name == "pages" %>
+      <%= render 'components/navlink' %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

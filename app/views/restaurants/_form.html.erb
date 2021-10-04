@@ -1,7 +1,15 @@
-<%= simple_form_for restaurant do |f| %>
-<%= f.input :name %>
-<%= f.input :address %>
-<%= f.input :phone_number %>
-<%= f.input :category, collection: Restaurant::CATEGORY %>
-<%= f.submit class: "btn btn-secondary mt-3 rounded" %>
-<% end %>
+  <div class="new-form">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-sm-offset-4 mx-auto">
+        <div class="background-white">
+          <%= simple_form_for restaurant do |f| %>
+            <%= f.input :name %>
+            <%= f.input :address %>
+            <%= f.input :phone_number %>
+            <%= f.input :category, collection: Restaurant::CATEGORY %>
+            <%= f.button :submit, 'Create', class: "create-button" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>

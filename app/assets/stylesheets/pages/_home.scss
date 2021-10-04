@@ -8,6 +8,7 @@
   background-image: url('waffles.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position:top;
   opacity: 0.6;
   position: absolute;
   top: 0px;
@@ -23,7 +24,6 @@
   text-shadow: 1px 1px 10px rgba(255, 255, 255, 1);
   font-weight: 900;
   font-size: 54px;
-  margin-top: 24px;
 }
 
 .subheader-text {

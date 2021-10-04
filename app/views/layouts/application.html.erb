@@ -9,9 +9,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <% unless controller.controller_name == "pages" %>
-      <%= render 'components/navlink' %>
-    <% end %>
+      <%= render 'components/navlinks' %>
     <%= yield %>
   </body>
 </html>

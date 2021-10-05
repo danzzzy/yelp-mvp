@@ -13,7 +13,14 @@
               <div class="restaurant-card">
                 <div>
                   <div class="restaurant-card-name">
-                    <%= restaurant.name %>
+                    <span class="rest-name">
+                    <%= restaurant.name%>
+                    </span>
+                    <% if restaurant.reviews.present? %>
+                    <span class="rating-avg">
+                      <%= restaurant.sum_rating %><i class="fas fa-star"></i>
+                    </span>
+                    <% end %>
                   </div >
                   <p>
                   <% case restaurant.category %>

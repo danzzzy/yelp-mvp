@@ -5,7 +5,7 @@
 }
 .home-page::before {
   content: "";
-  background-image: url('waffles.jpg');
+  background-image: asset-url('waffles.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position:top;

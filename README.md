@@ -1,24 +1,10 @@
-# README
+Rails app generated with minimal https://github.com/lewagon/rails-templates.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Get a minimal rails app ready to be deployed on Heroku with Bootstrap, Simple form and debugging gems.
+<pre>
+rails new \
+  --database postgresql \
+  --webpack \
+  -m https://raw.githubusercontent.com/lewagon/rails-templates/master/minimal.rb \
+  CHANGE_THIS_TO_YOUR_RAILS_APP_NAME
+</pre>
